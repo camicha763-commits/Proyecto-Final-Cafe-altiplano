@@ -1,0 +1,136 @@
+/* ===== layout.css: maqueta con Grid (primero el teléfono) ===== */
+
+/* ----- Teléfono: una columna con espaciado amplio y moderno ----- */
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  padding: 1rem;
+}
+
+/* main no crea caja propia: sus bloques entran directo a la grid del body */
+main {
+  display: contents;
+}
+
+/* Cabecera, portada y pie ocupan todo el ancho en cualquier tamaño */
+header,
+footer,
+.portada,
+.bloque--completo {
+  grid-column: 1 / -1;
+}
+
+/* Evita que una tabla o imagen ensanche la columna y cree desplazamiento horizontal */
+header,
+footer,
+main > *,
+.bloque {
+  min-width: 0;
+}
+
+/* ----- Logotipo textual moderno en cabecera ----- */
+.logo {
+  display: block;
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-align: center;
+  padding: 0.5rem 0;
+  color: var(--color-blanco);
+}
+
+/* ----- Portadas modernas con esquinas redondeadas ----- */
+.portada {
+  min-height: 35vh;
+  padding: 3rem 2rem;
+  background-color: var(--color-cafe);
+  color: var(--color-blanco);
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.5rem var(--color-sombra);
+}
+
+.portada h1 {
+  color: inherit;
+}
+
+.portada p {
+  max-width: 55ch;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Portada de la página de inicio: foto de fondo inmersiva */
+.portada--inicio {
+  min-height: 85vh;
+  padding: 4rem 2rem;
+  background-color: var(--color-oscuro);
+  background-image:
+    linear-gradient(to right, var(--color-velo) 0%, transparent 60%),
+    url("../imagenes/fondo.jpg");
+  background-size: cover;
+  background-position: center 85%;
+  background-repeat: no-repeat;
+  text-shadow: 0 2px 8px var(--color-sombra-texto);
+}
+
+/* ----- Menú: enlaces organizados con CSS Grid ----- */
+header nav ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  gap: 0.35rem;
+}
+
+/* ----- Galería de tarjetas: adaptable con Grid ----- */
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14.5rem, 1fr));
+  gap: 1.5rem;
+}
+
+/* ----- Formulario con separación limpia ----- */
+form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+/* ----- Tableta: desde 600 px, dos columnas ----- */
+@media (min-width: 600px) {
+  body {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1.5rem;
+  }
+
+  header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem 1.5rem;
+  }
+
+  .logo {
+    text-align: left;
+    padding: 0;
+  }
+
+  /* Un bloque que ocupa dos columnas */
+  .bloque--ancho {
+    grid-column: span 2;
+  }
+}
+
+/* ----- Computador: desde 900 px, tres columnas ----- */
+@media (min-width: 900px) {
+  body {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .bloque--ancho {
+    grid-column: span 2;
+  }
+}

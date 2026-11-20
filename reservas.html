@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Altiplano | Reservas</title>
+
+  <!-- Hojas de estilo ordenadas por tema -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/tipografia.css">
+  <link rel="stylesheet" href="css/cajas.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+
+  <!-- ===== CABECERA Y MENÚ ===== -->
+  <header>
+    <a href="index.html" class="logo">Café Altiplano</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="carta.html">Carta</a></li>
+        <li><a href="sedes.html">Sedes</a></li>
+        <li><a href="reservas.html" aria-current="page">Reservas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main>
+
+    <!-- ----- Portada ----- -->
+    <section class="portada">
+      <h1>Reservas</h1>
+      <p>Llena el formulario y te confirmamos por correo electrónico de manera inmediata.</p>
+    </section>
+
+    <!-- ----- Cómo funciona (lista ordenada) ----- -->
+    <section class="bloque">
+      <h2>Cómo funciona</h2>
+      <ol>
+        <li>Elige la sede, la fecha y la hora deseada.</li>
+        <li>Indica cuántas personas te acompañarán.</li>
+        <li>Envía el formulario y espera nuestra confirmación.</li>
+      </ol>
+    </section>
+
+    <!-- ----- Formulario de reserva ----- -->
+    <section class="bloque bloque--ancho">
+      <h2>Formulario de reserva</h2>
+      <form action="#" method="post">
+
+        <fieldset>
+          <legend>Tus datos</legend>
+
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej.: Laura Gómez" required>
+
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="nombre@ejemplo.com" required>
+
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" name="telefono" placeholder="300 000 0000" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Tu reserva</legend>
+
+          <label for="sede">Sede</label>
+          <select id="sede" name="sede" required>
+            <option value="">Elige una sede</option>
+            <option value="centro">Centro</option>
+            <option value="norte">Norte</option>
+            <option value="sur">Sur</option>
+          </select>
+
+          <label for="fecha">Fecha</label>
+          <input type="date" id="fecha" name="fecha" required>
+
+          <label for="hora">Hora</label>
+          <input type="time" id="hora" name="hora" required>
+
+          <label for="personas">Número de personas</label>
+          <input type="number" id="personas" name="personas" min="1" max="10" placeholder="Ej.: 4" required>
+
+          <fieldset>
+            <legend>Zona preferida</legend>
+            <input type="radio" id="zona-interior" name="zona" value="interior" required>
+            <label for="zona-interior">Interior</label>
+            <input type="radio" id="zona-terraza" name="zona" value="terraza">
+            <label for="zona-terraza">Terraza</label>
+          </fieldset>
+
+          <label for="comentarios">Comentarios</label>
+          <textarea id="comentarios" name="comentarios" rows="4" placeholder="Alergias, cumpleaños, silla para bebé..."></textarea>
+        </fieldset>
+
+        <p>
+          <input type="checkbox" id="confirmacion" name="confirmacion" value="si">
+          <label for="confirmacion">Quiero recibir la confirmación por correo.</label>
+        </p>
+
+        <button class="boton" type="submit">Enviar reserva</button>
+
+      </form>
+    </section>
+
+    <!-- ----- Política de reservas ----- -->
+    <aside class="nota">
+      <h2>Ten en cuenta</h2>
+      <p>Guardamos tu mesa durante 15 minutos después de la hora reservada. Si tienes algún retraso, por favor llámanos a la sede elegida.</p>
+    </aside>
+
+  </main>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer>
+    <p>&copy; 2026 Café Altiplano</p>
+  </footer>
+
+</body>
+</html>

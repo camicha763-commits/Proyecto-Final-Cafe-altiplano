@@ -1,0 +1,119 @@
+/* ===== componentes.css: menú, botones y formulario ===== */
+
+/* ----- Enlaces del menú ----- */
+nav a {
+  display: block;
+  padding: 0.65rem 1rem;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: var(--color-blanco);
+}
+
+/* La página activa luce moderna como una pestaña destacada */
+nav a[aria-current="page"] {
+  background-color: var(--color-verde-oliva);
+  color: var(--color-blanco);
+  font-weight: 600;
+}
+
+/* ----- Botones modernos en forma de píldora ----- */
+.boton {
+  display: inline-block;
+  padding: 0.85rem 1.85rem;
+  border: none;
+  border-radius: 2rem;
+  background-color: var(--color-acento);
+  color: var(--color-blanco);
+  font: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: 0 0.25rem 0.85rem rgba(182, 96, 35, 0.28);
+}
+
+.boton:hover,
+.boton:focus {
+  background-color: var(--color-cafe);
+  color: var(--color-blanco);
+  box-shadow: 0 0.25rem 0.85rem rgba(30, 20, 13, 0.35);
+}
+
+/* ----- Formulario moderno ----- */
+form fieldset {
+  padding: 1.5rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 1rem;
+  background-color: var(--color-blanco);
+  box-shadow: 0 0.25rem 1rem var(--color-sombra);
+}
+
+legend {
+  padding: 0 0.75rem;
+  color: var(--color-cafe);
+  font-family: "Playfair Display", "Georgia", serif;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+form label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--color-texto);
+}
+
+/* Separación ordenada para etiquetas del formulario */
+form label:not([for^="zona-"]):not([for="confirmacion"]) {
+  display: block;
+  margin-top: 0.85rem;
+  margin-bottom: 0.35rem;
+}
+
+/* Campos de texto, fecha, hora, número y textarea */
+:is(input, select, textarea):not([type="radio"], [type="checkbox"]) {
+  display: block;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 0.5rem;
+  background-color: #fbf9f5;
+  font: inherit;
+  font-size: 0.95rem;
+  color: var(--color-texto);
+}
+
+textarea {
+  resize: vertical;
+}
+
+:is(input, select, textarea):hover {
+  border-color: var(--color-acento);
+}
+
+/* ----- Controles nativos (radio y checkbox) con acento verde oliva ----- */
+input[type="radio"],
+input[type="checkbox"] {
+  accent-color: var(--color-verde-oliva);
+  cursor: pointer;
+}
+
+label[for^="zona-"],
+label[for="confirmacion"] {
+  cursor: pointer;
+}
+
+/* ----- Foco visible y accesible ----- */
+:is(a, button, input, select, textarea):focus {
+  outline: 0.1875rem solid var(--color-verde-oliva);
+  outline-offset: 0.125rem;
+}

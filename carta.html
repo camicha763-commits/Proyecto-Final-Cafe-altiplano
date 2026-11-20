@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Altiplano | Carta</title>
+
+  <!-- Hojas de estilo ordenadas por tema -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/tipografia.css">
+  <link rel="stylesheet" href="css/cajas.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+
+  <!-- ===== CABECERA Y MENÚ ===== -->
+  <header>
+    <a href="index.html" class="logo">Café Altiplano</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="carta.html" aria-current="page">Carta</a></li>
+        <li><a href="sedes.html">Sedes</a></li>
+        <li><a href="reservas.html">Reservas</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main>
+
+    <!-- ----- Portada ----- -->
+    <section class="portada">
+      <h1>Carta</h1>
+      <p>Precios en pesos colombianos. Todas nuestras bebidas y alimentos se preparan al momento con ingredientes frescos.</p>
+    </section>
+
+    <!-- ----- Índice con anclas internas ----- -->
+    <nav class="bloque bloque--completo">
+      <h2>Ir a</h2>
+      <ul>
+        <li><a href="#calientes">Bebidas calientes</a></li>
+        <li><a href="#frias">Bebidas frías</a></li>
+        <li><a href="#acompanamientos">Acompañamientos</a></li>
+      </ul>
+    </nav>
+
+    <!-- ----- Bebidas calientes ----- -->
+    <section id="calientes" class="bloque bloque--ancho">
+      <h2>Bebidas calientes</h2>
+
+      <div class="galeria">
+        <article class="tarjeta">
+          <figure>
+            <img src="imagenes/espresso.jpg" alt="Taza de espresso recién servido">
+            <figcaption>Espresso de altura</figcaption>
+          </figure>
+          <h3>Espresso</h3>
+          <p>Concentrado, aromático y con notas achocolatadas. $5.000</p>
+        </article>
+
+        <article class="tarjeta">
+          <figure>
+            <img src="imagenes/cappuccino.jpg" alt="Cappuccino con arte en la espuma de leche">
+            <figcaption>Cappuccino cremoso</figcaption>
+          </figure>
+          <h3>Cappuccino</h3>
+          <p>Espresso con leche emulsionada y microespuma sedosa. $8.500</p>
+        </article>
+      </div>
+
+      <div class="tabla-contenedor">
+        <table class="tabla tabla--precios">
+          <caption>Precios de bebidas calientes</caption>
+          <thead>
+            <tr>
+              <th scope="col">Bebida</th>
+              <th scope="col">Tamaño</th>
+              <th scope="col">Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Espresso</th>
+              <td>Sencillo</td>
+              <td>$5.000</td>
+            </tr>
+            <tr>
+              <th scope="row">Americano</th>
+              <td>Mediano</td>
+              <td>$6.000</td>
+            </tr>
+            <tr>
+              <th scope="row">Cappuccino</th>
+              <td>Mediano</td>
+              <td>$8.500</td>
+            </tr>
+            <tr>
+              <th scope="row">Latte de caramelo</th>
+              <td>Grande</td>
+              <td>$9.500</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ----- Bebidas frías ----- -->
+    <section id="frias" class="bloque bloque--ancho">
+      <h2>Bebidas frías</h2>
+
+      <div class="galeria">
+        <article class="tarjeta">
+          <figure>
+            <img src="imagenes/cold-brew.jpg" alt="Vaso de cold brew con cubos de hielo">
+            <figcaption>Cold brew de 18 horas</figcaption>
+          </figure>
+          <h3>Cold Brew</h3>
+          <p>Café macerado en frío, suave, refrescante y con baja acidez. $10.000</p>
+        </article>
+      </div>
+
+      <div class="tabla-contenedor">
+        <table class="tabla tabla--precios">
+          <caption>Precios de bebidas frías</caption>
+          <thead>
+            <tr>
+              <th scope="col">Bebida</th>
+              <th scope="col">Presentación</th>
+              <th scope="col">Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Cold brew clásico</th>
+              <td>Con hielo</td>
+              <td>$10.000</td>
+            </tr>
+            <tr>
+              <th scope="row">Cold brew tónica</th>
+              <td>Con agua tónica y cítricos</td>
+              <td>$11.500</td>
+            </tr>
+            <tr>
+              <th scope="row">Affogato artesanal</th>
+              <td>Espresso sobre helado de vainilla</td>
+              <td>$9.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ----- Acompañamientos y panadería ----- -->
+    <section id="acompanamientos" class="bloque bloque--ancho">
+      <h2>Acompañamientos</h2>
+
+      <div class="galeria">
+        <article class="tarjeta">
+          <figure>
+            <img src="imagenes/Brownie con nuecesjpg.jpg" alt="Brownie de chocolate con nueces sobre un plato">
+            <figcaption>Hecho cada mañana en nuestra cocina</figcaption>
+          </figure>
+          <h3>Brownie con nueces</h3>
+          <p>Bizcocho denso de chocolate con nueces crujientes. $8.000</p>
+        </article>
+
+        <article class="tarjeta">
+          <figure>
+            <img src="imagenes/Torta de Zanahoria.jpg" alt="Porción de torta de zanahoria con cobertura de crema">
+            <figcaption>Receta clásica con especias y nuez</figcaption>
+          </figure>
+          <h3>Torta de zanahoria</h3>
+          <p>Porción suave con especias aromáticas y crema de queso. $9.500</p>
+        </article>
+      </div>
+
+      <div class="tabla-contenedor">
+        <table class="tabla tabla--precios">
+          <caption>Precios de acompañamientos</caption>
+          <thead>
+            <tr>
+              <th scope="col">Producto</th>
+              <th scope="col">Porción</th>
+              <th scope="col">Precio</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Croissant de almendra</th>
+              <td>1 unidad</td>
+              <td>$7.500</td>
+            </tr>
+            <tr>
+              <th scope="row">Brownie con nueces</th>
+              <td>1 porción</td>
+              <td>$8.000</td>
+            </tr>
+            <tr>
+              <th scope="row">Torta de zanahoria</th>
+              <td>1 porción</td>
+              <td>$9.500</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ----- Cita con blockquote y cite ----- -->
+    <section class="bloque bloque--completo">
+      <h2>Nuestra filosofía</h2>
+      <blockquote class="cita">
+        <p>El buen café no necesita azúcar y el mal café no se la merece. En Café Altiplano cuidamos cada detalle desde la finca hasta tu taza.</p>
+      </blockquote>
+      <p>— <cite>Felipe Restrepo, Maestro Barista</cite></p>
+    </section>
+
+  </main>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer>
+    <p>&copy; 2026 Café Altiplano</p>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+/* ===== base.css: paleta de colores, reglas generales y fondo ===== */
+
+/* ----- Paleta moderna de cafetería de especialidad ----- */
+:root {
+  --color-cafe: #1e140d;           /* Espresso carbón profundo, sofisticado y moderno */
+  --color-cafe-claro: #533827;     /* Tostado moca cálido */
+  --color-crema: #f8f6f0;          /* Avena / crema nórdico cálido y luminoso */
+  --color-beige: #ebe3d5;          /* Lino / arena suave para contrastes */
+  --color-verde-oliva: #445337;    /* Verde oliva botánico de especialidad */
+  --color-blanco: #ffffff;         /* Blanco puro para superficies limpias */
+  --color-acento: #b66023;         /* Terracota / caramelo tostado moderno */
+  --color-texto: #251a14;          /* Tono café ultra oscuro para óptima legibilidad */
+  --color-borde: #e0d5c5;          /* Borde fino, limpio y sutil */
+  --color-sombra: rgba(30, 20, 13, 0.08); /* Sombra difusa suave y moderna */
+  --color-oscuro: #120c08;         /* Carbón oscuro para fondos inmersivos */
+  --color-velo: rgba(18, 12, 8, 0.65);
+  --color-sombra-texto: rgba(0, 0, 0, 0.75);
+}
+
+/* ----- Modelo de caja uniforme para todo el documento ----- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* ----- Tamaño base relativo a la configuración del navegador ----- */
+html {
+  font-size: 100%;
+}
+
+/* ----- Página: centrada, con ancho máximo de lectura y fondo cálido ----- */
+body {
+  max-width: 72rem;
+  margin: 0 auto;
+  background-color: var(--color-crema);
+  color: var(--color-texto);
+}
+
+/* ----- Imágenes fluidas ----- */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ----- Enlaces generales ----- */
+a {
+  color: var(--color-cafe-claro);
+}
+
+/* ----- Cabecera moderna con degradado sutil ----- */
+header {
+  background: linear-gradient(135deg, var(--color-cafe), var(--color-cafe-claro));
+  color: var(--color-blanco);
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1.5rem var(--color-sombra);
+}
+
+/* Los enlaces de cabecera heredan color blanco */
+header a {
+  color: inherit;
+}
+
+/* ----- Pie de página moderno y sobrio ----- */
+footer {
+  padding: 2rem 1.5rem;
+  background-color: var(--color-cafe);
+  color: var(--color-blanco);
+  text-align: center;
+  border-radius: 1rem;
+  margin-top: 1rem;
+}
+
+footer p {
+  margin: 0 auto;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
