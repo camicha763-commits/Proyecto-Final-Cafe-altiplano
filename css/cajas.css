@@ -2,7 +2,7 @@
 
 /* ----- Espaciados interiores ----- */
 header {
-  padding: 0.85rem 1.25rem;
+  padding: 0.85rem 1.5rem;
 }
 
 main {
@@ -17,75 +17,79 @@ nav ul,
   list-style: none;
 }
 
-/* ----- Tarjetas modernas con esquinas suaves y sombra limpia ----- */
+/* ----- Tarjetas modernas oscuras con bordes finos y limpios ----- */
 .tarjeta {
   padding: 1.25rem;
   border: 1px solid var(--color-borde);
-  border-radius: 1rem;
-  background-color: var(--color-blanco);
+  border-radius: 1.25rem;
+  background-color: var(--color-cafe-claro);
   box-shadow: 0 0.5rem 1.5rem var(--color-sombra);
 }
 
-/* ----- Figuras de imágenes ----- */
-figure {
+/* ----- Figuras de imágenes con fondo oscuro estilizado ----- */
+.tarjeta figure {
   margin: 0 0 1rem;
+  background: radial-gradient(circle at center, #100b08 0%, #050302 100%);
+  border-radius: 1rem;
+  padding: 0.35rem;
+  border: 1px solid rgba(220, 195, 170, 0.1);
+  box-shadow: inset 0 0 1.5rem rgba(0, 0, 0, 0.5);
 }
 
-/* ----- Citas y notas modernas con acento lateral ----- */
+/* ----- Citas y notas modernas con acento lateral sutil ----- */
 .cita {
-  padding: 1.25rem 1.5rem;
-  border-left: 0.35rem solid var(--color-verde-oliva);
-  background-color: var(--color-blanco);
-  border-radius: 0.85rem;
+  padding: 1.5rem 1.75rem;
+  border-left: 0.35rem solid var(--color-acento);
+  background-color: var(--color-cafe-claro);
+  border-radius: 1rem;
   border-top: 1px solid var(--color-borde);
   border-right: 1px solid var(--color-borde);
   border-bottom: 1px solid var(--color-borde);
-  box-shadow: 0 0.25rem 1rem var(--color-sombra);
+  box-shadow: 0 0.5rem 1.5rem var(--color-sombra);
   margin: 0 0 0.5rem;
 }
 
 .nota {
-  padding: 1.25rem 1.5rem;
-  border-left: 0.35rem solid var(--color-acento);
-  background-color: var(--color-blanco);
-  border-radius: 0.85rem;
+  padding: 1.5rem 1.75rem;
+  border-left: 0.35rem solid var(--color-verde-oliva);
+  background-color: var(--color-cafe-claro);
+  border-radius: 1rem;
   border-top: 1px solid var(--color-borde);
   border-right: 1px solid var(--color-borde);
   border-bottom: 1px solid var(--color-borde);
-  box-shadow: 0 0.25rem 1rem var(--color-sombra);
+  box-shadow: 0 0.5rem 1.5rem var(--color-sombra);
 }
 
-/* ----- Tablas modernas con desplazamiento horizontal seguro ----- */
+/* ----- Tablas modernas: líneas ultrafinas, sin bordes toscos ni marrones gruesos ----- */
 .tabla-contenedor {
   overflow-x: auto;
   margin-top: 1.25rem;
-  margin-bottom: 1rem;
-  border-radius: 0.85rem;
-  box-shadow: 0 0.25rem 1rem var(--color-sombra);
+  margin-bottom: 1.25rem;
+  border-radius: 1rem;
+  border: 1px solid var(--color-borde);
+  box-shadow: 0 0.5rem 1.5rem var(--color-sombra);
 }
 
 .tabla {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  background-color: var(--color-blanco);
-  border: 1px solid var(--color-borde);
-  border-radius: 0.85rem;
-  overflow: hidden;
+  border-collapse: collapse;
+  background-color: var(--color-cafe-claro);
 }
 
 .tabla th,
 .tabla td {
-  padding: 0.85rem 1rem;
+  padding: 0.95rem 1.25rem;
   border-bottom: 1px solid var(--color-borde);
   text-align: left;
 }
 
 .tabla thead th {
-  background-color: var(--color-beige);
-  font-size: 0.875rem;
+  background-color: rgba(197, 138, 88, 0.12);
+  color: var(--color-acento);
+  font-size: 0.85rem;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid rgba(197, 138, 88, 0.25);
 }
 
 .tabla tbody tr:last-child th,
@@ -93,23 +97,34 @@ figure {
   border-bottom: none;
 }
 
-/* Filas alternas sutiles */
+/* Filas alternadas sutiles en lugar de franjas gruesas */
 .tabla tbody tr:nth-child(even) {
-  background-color: #faf8f4;
+  background-color: rgba(255, 255, 255, 0.02);
 }
 
-/* Tablas de precios: la última columna alineada a la derecha con peso */
-.tabla--precios th:last-child,
-.tabla--precios td:last-child {
-  text-align: right;
+.tabla tbody th {
+  color: var(--color-crema);
   font-weight: 600;
 }
 
-/* Fotos de tarjetas con proporciones modernas y corte impecable */
+.tabla tbody td {
+  color: var(--color-beige);
+}
+
+/* Precios destacados y alineados a la derecha */
+.tabla--precios th:last-child,
+.tabla--precios td:last-child {
+  text-align: right;
+  font-weight: 700;
+  color: var(--color-acento);
+}
+
+/* Fotos de tarjetas con proporciones modernas, fondo oscuro y corte impecable */
 .tarjeta img {
   width: 100%;
-  height: 13rem;
+  height: 14rem;
   object-fit: cover;
   border-radius: 0.75rem;
   display: block;
+  background-color: #090604;
 }

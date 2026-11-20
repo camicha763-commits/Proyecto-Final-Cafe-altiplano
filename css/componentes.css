@@ -6,70 +6,88 @@ nav a {
   padding: 0.65rem 1rem;
   text-decoration: none;
   text-align: center;
-  border-radius: 0.5rem;
+  border-radius: 2rem;
   font-weight: 500;
   font-size: 0.95rem;
+  color: var(--color-beige);
 }
 
 nav a:hover,
 nav a:focus {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: rgba(255, 255, 255, 0.1);
   color: var(--color-blanco);
 }
 
-/* La página activa luce moderna como una pestaña destacada */
+/* La página activa en el menú: fondo negro elegante con borde blanco, sin fondo marrón */
 nav a[aria-current="page"] {
-  background-color: var(--color-verde-oliva);
+  background-color: #000000;
   color: var(--color-blanco);
-  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  font-weight: 700;
 }
 
-/* ----- Botones modernos en forma de píldora ----- */
+/* ----- Botones modernos en forma de píldora (como en la referencia) ----- */
 .boton {
   display: inline-block;
   padding: 0.85rem 1.85rem;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 2rem;
   background-color: var(--color-acento);
-  color: var(--color-blanco);
+  color: #080604;
   font: inherit;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 0.95rem;
   letter-spacing: 0.02em;
   text-decoration: none;
   cursor: pointer;
   text-align: center;
-  box-shadow: 0 0.25rem 0.85rem rgba(182, 96, 35, 0.28);
+  box-shadow: 0 0.35rem 1rem rgba(197, 138, 88, 0.3);
 }
 
 .boton:hover,
 .boton:focus {
-  background-color: var(--color-cafe);
-  color: var(--color-blanco);
-  box-shadow: 0 0.25rem 0.85rem rgba(30, 20, 13, 0.35);
+  background-color: var(--color-acento-hover);
+  color: #080604;
+  box-shadow: 0 0.45rem 1.25rem rgba(197, 138, 88, 0.45);
 }
 
-/* ----- Formulario moderno ----- */
+/* Botón secundario con borde sutil */
+.boton--secundario {
+  background-color: transparent;
+  color: var(--color-crema);
+  border: 1px solid rgba(245, 238, 230, 0.35);
+  box-shadow: none;
+}
+
+.boton--secundario:hover,
+.boton--secundario:focus {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-blanco);
+  border-color: var(--color-crema);
+  box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.3);
+}
+
+/* ----- Formulario moderno oscuro ----- */
 form fieldset {
   padding: 1.5rem;
   border: 1px solid var(--color-borde);
-  border-radius: 1rem;
-  background-color: var(--color-blanco);
-  box-shadow: 0 0.25rem 1rem var(--color-sombra);
+  border-radius: 1.25rem;
+  background-color: var(--color-cafe-claro);
+  box-shadow: 0 0.5rem 1.5rem var(--color-sombra);
 }
 
 legend {
   padding: 0 0.75rem;
-  color: var(--color-cafe);
+  color: var(--color-acento);
   font-family: "Playfair Display", "Georgia", serif;
-  font-size: 1.2rem;
+  font-size: 1.25rem;
   font-weight: bold;
 }
 
 form label {
   font-weight: 600;
   font-size: 0.9rem;
-  color: var(--color-texto);
+  color: var(--color-crema);
 }
 
 /* Separación ordenada para etiquetas del formulario */
@@ -83,13 +101,13 @@ form label:not([for^="zona-"]):not([for="confirmacion"]) {
 :is(input, select, textarea):not([type="radio"], [type="checkbox"]) {
   display: block;
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1rem;
   border: 1px solid var(--color-borde);
   border-radius: 0.5rem;
-  background-color: #fbf9f5;
+  background-color: #080604;
   font: inherit;
   font-size: 0.95rem;
-  color: var(--color-texto);
+  color: var(--color-crema);
 }
 
 textarea {
@@ -100,20 +118,21 @@ textarea {
   border-color: var(--color-acento);
 }
 
-/* ----- Controles nativos (radio y checkbox) con acento verde oliva ----- */
+/* ----- Controles nativos (radio y checkbox) con acento dorado ----- */
 input[type="radio"],
 input[type="checkbox"] {
-  accent-color: var(--color-verde-oliva);
+  accent-color: var(--color-acento);
   cursor: pointer;
 }
 
 label[for^="zona-"],
 label[for="confirmacion"] {
   cursor: pointer;
+  color: var(--color-beige);
 }
 
 /* ----- Foco visible y accesible ----- */
 :is(a, button, input, select, textarea):focus {
-  outline: 0.1875rem solid var(--color-verde-oliva);
+  outline: 0.1875rem solid var(--color-acento);
   outline-offset: 0.125rem;
 }

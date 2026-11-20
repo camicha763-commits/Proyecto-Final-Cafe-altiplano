@@ -1,20 +1,22 @@
 /* ===== base.css: paleta de colores, reglas generales y fondo ===== */
 
-/* ----- Paleta moderna de cafetería de especialidad ----- */
+/* ----- Paleta moderna de cafetería de especialidad (Dark Luxury) ----- */
 :root {
-  --color-cafe: #1e140d;           /* Espresso carbón profundo, sofisticado y moderno */
-  --color-cafe-claro: #533827;     /* Tostado moca cálido */
-  --color-crema: #f8f6f0;          /* Avena / crema nórdico cálido y luminoso */
-  --color-beige: #ebe3d5;          /* Lino / arena suave para contrastes */
-  --color-verde-oliva: #445337;    /* Verde oliva botánico de especialidad */
-  --color-blanco: #ffffff;         /* Blanco puro para superficies limpias */
-  --color-acento: #b66023;         /* Terracota / caramelo tostado moderno */
-  --color-texto: #251a14;          /* Tono café ultra oscuro para óptima legibilidad */
-  --color-borde: #e0d5c5;          /* Borde fino, limpio y sutil */
-  --color-sombra: rgba(30, 20, 13, 0.08); /* Sombra difusa suave y moderna */
-  --color-oscuro: #120c08;         /* Carbón oscuro para fondos inmersivos */
-  --color-velo: rgba(18, 12, 8, 0.65);
-  --color-sombra-texto: rgba(0, 0, 0, 0.75);
+  --color-cafe: #0b0806;                 /* Fondo oscuro negro carbón / espresso profundo */
+  --color-cafe-claro: #140e0a;           /* Superficie de tarjetas y contenedores */
+  --color-crema: #f5eee6;                /* Texto principal en tono marfil / crema cálido */
+  --color-beige: #bfaea0;                /* Texto secundario y subtítulos delicados */
+  --color-verde-oliva: #7d8f69;          /* Verde oliva sutil para acentos botánicos */
+  --color-blanco: #ffffff;               /* Blanco puro de alto contraste */
+  --color-acento: #c58a58;               /* Ámbar / caramelo dorado cálido (botones y destacados) */
+  --color-acento-hover: #d89c68;         /* Acento claro al interactuar */
+  --color-texto: #f5eee6;                /* Color base para lectura sobre fondo oscuro */
+  --color-texto-secundario: #a89888;     /* Color atenuado para notas secundarias */
+  --color-borde: rgba(220, 195, 170, 0.12); /* Borde ultrafino y sutil */
+  --color-sombra: rgba(0, 0, 0, 0.6);    /* Sombra profunda y elegante */
+  --color-oscuro: #050403;               /* Negro profundo */
+  --color-velo: rgba(6, 4, 3, 0.8);      /* Velo oscuro para legibilidad sobre imágenes */
+  --color-sombra-texto: rgba(0, 0, 0, 0.9); /* Sombra para textos sobre fondos */
 }
 
 /* ----- Modelo de caja uniforme para todo el documento ----- */
@@ -29,11 +31,11 @@ html {
   font-size: 100%;
 }
 
-/* ----- Página: centrada, con ancho máximo de lectura y fondo cálido ----- */
+/* ----- Página: centrada, con ancho máximo de lectura y fondo oscuro premium ----- */
 body {
   max-width: 72rem;
   margin: 0 auto;
-  background-color: var(--color-crema);
+  background-color: var(--color-cafe);
   color: var(--color-texto);
 }
 
@@ -45,34 +47,35 @@ img {
 
 /* ----- Enlaces generales ----- */
 a {
-  color: var(--color-cafe-claro);
+  color: var(--color-acento);
 }
 
-/* ----- Cabecera moderna con degradado sutil ----- */
+/* ----- Cabecera moderna en negro profundo ----- */
 header {
-  background: linear-gradient(135deg, var(--color-cafe), var(--color-cafe-claro));
+  background: #080604;
   color: var(--color-blanco);
+  border: 1px solid var(--color-borde);
   border-radius: 1rem;
-  box-shadow: 0 0.5rem 1.5rem var(--color-sombra);
+  box-shadow: 0 0.5rem 2rem var(--color-sombra);
 }
 
-/* Los enlaces de cabecera heredan color blanco */
+/* Los enlaces de cabecera heredan color */
 header a {
   color: inherit;
 }
 
 /* ----- Pie de página moderno y sobrio ----- */
 footer {
-  padding: 2rem 1.5rem;
-  background-color: var(--color-cafe);
-  color: var(--color-blanco);
+  padding: 2.5rem 1.5rem;
+  background-color: #080604;
+  color: var(--color-beige);
   text-align: center;
+  border: 1px solid var(--color-borde);
   border-radius: 1rem;
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 footer p {
   margin: 0 auto;
   font-size: 0.95rem;
-  opacity: 0.9;
 }
