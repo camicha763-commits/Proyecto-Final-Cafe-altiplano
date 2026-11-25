@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Altiplano | Guía</title>
+
+  <!-- Las mismas cinco hojas de estilo de las otras páginas -->
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/tipografia.css">
+  <link rel="stylesheet" href="css/cajas.css">
+  <link rel="stylesheet" href="css/componentes.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/guia.css">
+</head>
+<body>
+
+  <!-- ===== CABECERA Y MENÚ (ahora con 5 enlaces) ===== -->
+  <header>
+    <a href="index.html" class="logo">Café Altiplano</a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="carta.html">Carta</a></li>
+        <li><a href="sedes.html">Sedes</a></li>
+        <li><a href="reservas.html">Reservas</a></li>
+        <li><a href="guia.html" aria-current="page">Guía</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ----- Portada: el único h1 ----- -->
+    <section class="portada portada--guia">
+      <span class="lema">Aprende en casa</span>
+      <h1>Guía para preparar café en casa</h1>
+      <p>Un buen café en casa depende de tres cosas: la molienda, la proporción y el tiempo. Elegí un método y seguí los pasos.</p>
+    </section>
+
+    <!-- ----- Índice con anclas internas ----- -->
+    <nav class="bloque bloque--completo indice">
+      <h2>Índice</h2>
+      <ul>
+        <li><a href="#prensa">Prensa francesa</a></li>
+        <li><a href="#filtro">Filtro</a></li>
+        <li><a href="#moka">Moka</a></li>
+        <li><a href="#comparacion">Comparación</a></li>
+        <li><a href="#glosario">Glosario</a></li>
+      </ul>
+    </nav>
+
+    <!-- ----- Método 1: una section por método ----- -->
+    <section id="prensa" class="metodo bloque">
+      <h2 class="metodo__titulo">Prensa francesa</h2>
+      <figure>
+        <img src="imagenes/cappuccino.jpg" alt="Cappuccino con arte en la espuma de leche">
+        <figcaption>Un café recién preparado, como el de la prensa francesa</figcaption>
+      </figure>
+      <h3>Ingredientes</h3>
+      <ul>
+        <li>30 g de café molido grueso</li>
+        <li>500 ml de agua a 94 °C</li>
+        <li>Prensa de 600 ml</li>
+      </ul>
+      <h3>Pasos</h3>
+      <ol>
+        <li>Echá el café en la prensa.</li>
+        <li>Agregá el agua y mezclá.</li>
+        <li>Esperá 4 minutos.</li>
+        <li>Presioná el émbolo despacio.</li>
+        <li>Serví de inmediato.</li>
+      </ol>
+    </section>
+
+    <!-- ----- Método 2 ----- -->
+    <section id="filtro" class="metodo bloque">
+      <h2 class="metodo__titulo">Filtro</h2>
+      <figure>
+        <img src="imagenes/cold-brew.jpg" alt="Vaso de cold brew con cubos de hielo">
+        <figcaption>Un café suave, como el que sale del filtro</figcaption>
+      </figure>
+      <h3>Ingredientes</h3>
+      <ul>
+        <li>20 g de café molido medio</li>
+        <li>320 ml de agua a 93 °C</li>
+        <li>Filtro y cafetera</li>
+      </ul>
+      <h3>Pasos</h3>
+      <ol>
+        <li>Enjuagá el filtro con agua caliente.</li>
+        <li>Agregá el café.</li>
+        <li>Mojá el café y esperá 30 segundos.</li>
+        <li>Vertí el resto del agua en círculos.</li>
+        <li>Servilo cuando termine de gotear.</li>
+      </ol>
+    </section>
+
+    <!-- ----- Método 3: destacado, ocupa dos columnas a 600 px ----- -->
+    <section id="moka" class="metodo metodo--destacado bloque">
+      <h2 class="metodo__titulo">Moka</h2>
+      <figure>
+        <img src="imagenes/espresso.jpg" alt="Taza de espresso recién servido">
+        <figcaption>Un café concentrado, como el de la moka</figcaption>
+      </figure>
+      <h3>Ingredientes</h3>
+      <ul>
+        <li>15 g de café molido fino</li>
+        <li>Agua hasta la válvula</li>
+        <li>Cafetera moka de 3 tazas</li>
+      </ul>
+      <h3>Pasos</h3>
+      <ol>
+        <li>Llená la base con agua caliente.</li>
+        <li>Agregá el café sin apretarlo.</li>
+        <li>Cerrá y llevá a fuego bajo.</li>
+        <li>Retirá al oír el borboteo.</li>
+        <li>Serví.</li>
+      </ol>
+    </section>
+
+    <!-- ----- Tabla comparativa ----- -->
+    <section id="comparacion" class="bloque bloque--completo">
+      <h2>Comparación de métodos</h2>
+      <div class="tabla-contenedor">
+        <table class="tabla">
+          <caption>Comparación · Prensa francesa, filtro y moka</caption>
+          <thead>
+            <tr>
+              <th scope="col">Método</th>
+              <th scope="col">Molienda</th>
+              <th scope="col">Proporción</th>
+              <th scope="col">Tiempo</th>
+              <th scope="col">Dificultad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Prensa francesa</th>
+              <td>Gruesa</td>
+              <td>1:16</td>
+              <td>4 min</td>
+              <td>Fácil</td>
+            </tr>
+            <tr>
+              <th scope="row">Filtro</th>
+              <td>Media</td>
+              <td>1:16</td>
+              <td>3 min</td>
+              <td>Media</td>
+            </tr>
+            <tr>
+              <th scope="row">Moka</th>
+              <td>Fina</td>
+              <td>1:7</td>
+              <td>5 min</td>
+              <td>Media</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ----- Consejos del barista (aside) ----- -->
+    <aside class="nota consejos">
+      <h2>Consejos del barista</h2>
+      <ul>
+        <li>Usá agua filtrada.</li>
+        <li>Muelé el café justo antes de prepararlo.</li>
+        <li>Limpiá la cafetera después de cada uso.</li>
+      </ul>
+      <blockquote class="cita">
+        <p>El mejor café es el que se prepara con calma.</p>
+      </blockquote>
+      <p>— <cite>Camila Rojas, jefa de baristas</cite></p>
+    </aside>
+
+    <!-- ----- Glosario (lista de definición) ----- -->
+    <section id="glosario" class="bloque bloque--ancho">
+      <h2>Glosario</h2>
+      <dl>
+        <dt>Molienda</dt>
+        <dd>Tamaño de las partículas del café.</dd>
+        <dt>Proporción</dt>
+        <dd>Relación entre café y agua.</dd>
+        <dt>Extracción</dt>
+        <dd>Cuánto sabor pasa del café al agua.</dd>
+      </dl>
+    </section>
+
+    <!-- ----- Formulario "Recibir la guía" ----- -->
+    <section class="bloque bloque--ancho">
+      <h2>Recibir la guía</h2>
+      <form action="#" method="post">
+
+        <fieldset>
+          <legend>Tus datos</legend>
+
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Ej.: Laura Gómez" required>
+
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" name="correo" placeholder="nombre@ejemplo.com" required>
+
+          <label for="metodo">Método favorito</label>
+          <select id="metodo" name="metodo" required>
+            <option value="">Elige un método</option>
+            <option value="prensa">Prensa</option>
+            <option value="filtro">Filtro</option>
+            <option value="moka">Moka</option>
+          </select>
+
+          <fieldset>
+            <legend>Nivel</legend>
+            <input type="radio" id="nivel-principiante" name="nivel" value="principiante" required>
+            <label for="nivel-principiante">Principiante</label>
+            <input type="radio" id="nivel-experiencia" name="nivel" value="experiencia">
+            <label for="nivel-experiencia">Con experiencia</label>
+          </fieldset>
+        </fieldset>
+
+        <p>
+          <input type="checkbox" id="novedades" name="novedades" value="si">
+          <label for="novedades">Acepto recibir novedades.</label>
+        </p>
+
+        <button class="boton" type="submit">Quiero la guía</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <!-- ===== PIE DE PÁGINA ===== -->
+  <footer>
+    <p>&copy; 2026 Café Altiplano. Pasión y calidad en cada taza.</p>
+  </footer>
+
+</body>
+</html>
+
+
