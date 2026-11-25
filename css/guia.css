@@ -1,0 +1,139 @@
+/* ===== guia.css: estilos exclusivos para guia.html (Examen 3) ===== */
+/* Respeta rigurosamente las variables de color, tipografía y maquetación con CSS Grid */
+
+/* ----- Portada de la Guía ----- */
+.portada--guia {
+  background: radial-gradient(circle at top right, rgba(197, 138, 88, 0.12) 0%, rgba(8, 6, 4, 0.98) 70%), #080604;
+}
+
+/* ----- Tarjetas de cada método de preparación ----- */
+.metodo {
+  padding: 1.5rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 1.25rem;
+  background-color: var(--color-cafe-claro);
+  box-shadow: 0 0.5rem 1.5rem var(--color-sombra);
+}
+
+.metodo h2.metodo__titulo {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--color-crema);
+}
+
+.metodo figure {
+  margin: 0 0 1.25rem;
+  background: radial-gradient(circle at center, #100b08 0%, #050302 100%);
+  border-radius: 1rem;
+  padding: 0.35rem;
+  border: 1px solid rgba(220, 195, 170, 0.1);
+  box-shadow: inset 0 0 1.5rem rgba(0, 0, 0, 0.5);
+}
+
+.metodo img {
+  width: 100%;
+  height: 14rem;
+  object-fit: cover;
+  border-radius: 0.75rem;
+  display: block;
+}
+
+.metodo h3 {
+  color: var(--color-acento);
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.metodo ul,
+.metodo ol {
+  padding-inline-start: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--color-beige);
+}
+
+.metodo li {
+  margin-bottom: 0.35rem;
+  line-height: 1.5;
+}
+
+/* ----- Responsividad de métodos en cuadrícula (Mobile First) ----- */
+/* Tableta (600px en adelante): Método destacado (Moka) ocupa dos columnas */
+@media (min-width: 600px) {
+  .metodo--destacado {
+    grid-column: span 2;
+  }
+}
+
+/* Computador (900px en adelante): Los tres métodos se distribuyen armoniosamente en 3 columnas */
+@media (min-width: 900px) {
+  .metodo--destacado {
+    grid-column: span 1;
+  }
+}
+
+/* ----- Sección de Glosario ----- */
+#glosario {
+  padding: 1.5rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 1.25rem;
+  background-color: var(--color-cafe-claro);
+  box-shadow: 0 0.5rem 1.5rem var(--color-sombra);
+}
+
+#glosario h2 {
+  margin-top: 0;
+}
+
+/* ----- Consejos del Barista (aside.nota) ----- */
+.consejos ul {
+  padding-inline-start: 1.25rem;
+  margin-bottom: 1.25rem;
+  color: var(--color-crema);
+}
+
+.consejos li {
+  margin-bottom: 0.35rem;
+}
+
+.consejos cite {
+  color: var(--color-acento);
+  font-style: italic;
+}
+
+/* ----- Formulario de suscripción para la guía ----- */
+.bloque form fieldset fieldset {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin-top: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--color-borde);
+  border-radius: 0.75rem;
+  background-color: rgba(0, 0, 0, 0.25);
+}
+
+.bloque form fieldset fieldset legend {
+  font-size: 1.05rem;
+}
+
+.bloque form fieldset fieldset label {
+  margin-top: 0;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.bloque form p {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 0.75rem;
+  margin: 0.5rem 0 0;
+}
+
+.bloque form p label {
+  margin-top: 0;
+  margin-bottom: 0;
+  cursor: pointer;
+}

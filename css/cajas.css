@@ -60,6 +60,30 @@ nav ul,
   box-shadow: 0 0.5rem 1.5rem var(--color-sombra);
 }
 
+/* Textos en blanco para máxima legibilidad en la nota de términos */
+.nota .lema {
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.nota h2 {
+  color: #ffffff;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.nota p {
+  color: #ffffff;
+  opacity: 0.95;
+  margin-bottom: 0;
+}
+
 /* ----- Tablas modernas: líneas ultrafinas, sin bordes toscos ni marrones gruesos ----- */
 .tabla-contenedor {
   overflow-x: auto;
@@ -119,11 +143,12 @@ nav ul,
   color: var(--color-acento);
 }
 
-/* Fotos de tarjetas con proporciones modernas, fondo oscuro y corte impecable */
+/* Fotos de tarjetas completas sin recortar con fondo oscuro */
 .tarjeta img {
   width: 100%;
-  height: auto;
+  height: 15rem;
+  object-fit: contain;
   border-radius: 0.75rem;
   display: block;
-  background-color: #d7b777;
+  background-color: #080503;
 }
